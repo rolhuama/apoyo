@@ -3,3 +3,10 @@ lINK:https://k21academy.com/docker-kubernetes/the-connection-to-the-server-local
 cp /etc/kubernetes/admin.conf $HOME/
 chown $(id -u):$(id -g) $HOME/admin.conf
 export KUBECONFIG=$HOME/admin.conf
+
+
+#prueba
+1
+2
+3
+4
