@@ -1,0 +1,25 @@
+CONFIGURACIONES DOCKER
+docker ps - lista los contenedor activos
+docker ps -a - lista todos los contenedor
+docker run "imagen" - ejecuta el contenedor
+docker run -dp "3000:3000" "nombre del tag" - activa el contenedor con su puerto
+docker exec "ejecutar imagen existente" - ejecuta el contenedor existente
+docker stop "imagen del contenedor" - detener contenedor
+docker run -v /home/trabajo/Descargas/app/app/etc:/etc/todos -dp 3000:3000 apppp - se ingresa volumen en el docker para que la informacion no se pierda
+docker run -v /home/trabajo/Descargas/app/app/etc:/etc/todos -dp 3000:3000 -v /home/trabajo/Descargas/app/app/src:/app/src apppp - modica el codigo 
+docker build -t "nombre de la etiquita" - ejecutar Dockerfile
+
+--crear en docker hub
+docker tag "a876f36e5972-imagen" rolervengador/"apppp-nombre de la imagen" - etiqueta la imagen para el repositorio de docker hub
+docker push "rolervengador/apppp-nombre de la etiqueta" - se ingresa la etiqueta en el repositorio
+
+historial de images docker
+docker history "app:v2-la imagen de docker con su etiqueta" - comando del historial de imagen
+
+--Filtra la imagenes docker
+docker ps -q -> Lista solo las imagenes activos
+docker rm -f $(docker ps -q) -> elimina todas las imagenes activos 
+
+-Dockercompose
+docker-compose up -d - ejecutar un yaml de docker compose
+sudo docker-compose rm

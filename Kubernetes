@@ -1,0 +1,5 @@
+#CONFIGURACION DE KUBECTL DE KUBERNETES EN UBUNTU
+lINK:https://k21academy.com/docker-kubernetes/the-connection-to-the-server-localhost8080-was-refused/
+cp /etc/kubernetes/admin.conf $HOME/
+chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf
